@@ -1,0 +1,197 @@
+.skills-container {
+  height: 1300px;
+  position: relative;
+  background: #0b345d;
+  background-image: linear-gradient(
+    -125deg,
+    #002f62 0%,
+    #18496a 50%,
+    #138b89 100%
+  );
+  color: white;
+  z-index: -2;
+
+  @include media($laptop-S) {
+    padding-top: 550px;
+  }
+  @include media($phone-L) {
+    height: 1350px;
+    padding-top: 900px;
+  }
+  @include media(425px) {
+    padding-top: 950px;
+  }
+  @include media(390px) {
+    padding-top: 1000px;
+  }
+  @include media($phone-M) {
+    padding-top: 1050px;
+  }
+  @include media($phone-S) {
+    padding-top: 1150px;
+  }
+
+  .svg-top {
+    @include media(1440px) {
+      top: -18%;
+    }
+    @include media($laptop-M) {
+      top: -15%;
+    }
+    @include media($laptop-S) {
+      top: 40%;
+    }
+    @include media($tablet) {
+      top: 44%;
+    }
+    @include media($phone-L) {
+      top: 50%;
+    }
+    @include media(425px) {
+      top: 53%;
+    }
+    @include media($phone-M) {
+      top: 57%;
+    }
+    @include media($phone-S) {
+      top: 61%;
+    }
+  }
+
+  #skills-header {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+
+    @include media($laptop-S) {
+      margin: 15px 0 35px 0;
+    }
+
+    i {
+      font-size: 20px;
+    }
+
+    h2 {
+      display: inline;
+      margin-left: 15px;
+    }
+  }
+
+  #skills-section {
+    padding-top: 500px;
+  }
+  .svg-top {
+    bottom: 70%;
+  }
+  i {
+    -webkit-text-fill-color: white;
+  }
+
+  #skills-items-wrapper {
+    width: $containerDesktop;
+    margin: auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "skill1 skill2 skill3 skill4"
+      "skill5 skill6 skill7 skill8";
+
+    @for $i from 1 through 8 {
+      & div:nth-child(#{$i}) {
+        grid-area: skill#{$i};
+      }
+    }
+
+    @include media($laptop-S) {
+      width: 100%;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+        ". skill1 . skill2 . skill3 ."
+        ". . skill4 . skill5 . ."
+        ". skill6 . skill7 . skill8 .";
+    }
+
+    @include media($phone-L) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        ". skill1 . skill2 ."
+        " . . skill3 . ."
+        ". skill4 . skill5 ."
+        " . . skill6 . ."
+        ". skill7 . skill8 .";
+    }
+
+    h5 {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+
+      @include media($phone-L) {
+        font-size: 12px;
+      }
+    }
+
+    .skills-item {
+      margin: 50px auto;
+
+      @include media($phone-L) {
+        margin: 25px auto;
+      }
+    }
+
+    .fab {
+      font-size: 60px;
+      margin: 15px auto;
+
+      @include media($laptop-S) {
+        font-size: 45px;
+      }
+      @include media($phone-L) {
+        font-size: 30px;
+      }
+    }
+
+    #bootstrap-icon {
+      margin: 15px auto;
+      width: 55px;
+      height: 55px;
+      padding-top: 3px;
+      background: white;
+      color: rgb(4, 84, 99);
+      font-size: 40px;
+      font-weight: 900;
+      border-radius: 10px;
+
+      @include media($laptop-S) {
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+      }
+      @include media($phone-L) {
+        width: 32px;
+        height: 32px;
+        font-size: 24px;
+      }
+    }
+
+    #mongodb-icon {
+      width: 75px;
+      height: 75px;
+      margin: 0px 0 10px 0;
+
+      @include media($laptop-S) {
+        width: 57px;
+        height: 57px;
+      }
+      @include media($phone-L) {
+        margin-top: 8px;
+        width: 42px;
+        height: 42px;
+      }
+    }
+  }
+}

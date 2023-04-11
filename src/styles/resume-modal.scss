@@ -1,0 +1,225 @@
+#modal-background {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+  background: rgba(50, 50, 50, 0.7);
+  transition: opacity 0.5s ease-in-out;
+}
+
+#resume-modal {
+  position: absolute;
+  width: 765px;
+  height: auto;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: white;
+  background: rgba(25, 25, 25, 0.9);
+  overflow-wrap: break-word;
+  padding: 100px 40px 50px 40px;
+  box-sizing: border-box;
+  font-size: 13px;
+  -webkit-transition: -moz-transform 0.4s ease-in-out;
+  -moz-transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, top 0.3s ease-out;
+
+  @include media($phone-L) {
+    width: 380px;
+    padding: 100px 25px 35px 25px;
+  }
+  @include media($phone-M) {
+    width: 325px;
+    padding: 100px 15px 20px 15px;
+    font-size: 11px;
+  }
+  @include media($phone-S) {
+    width: 300px;
+  }
+
+  #close-modal {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 25px;
+      height: 2px;
+      background: white;
+    }
+    &::before {
+      transform: rotate(225deg);
+    }
+    &::after {
+      transform: rotate(-225deg);
+      position: absolute;
+      top: 11px;
+      right: 0px;
+
+      @include media($phone-M) {
+        top: 9px;
+      }
+    }
+  }
+
+  #resume-link-modal {
+    font-size: 16px;
+    margin-top: 35px;
+
+    a {
+      color: white;
+    }
+  }
+
+  h1 {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 28px;
+    text-transform: uppercase;
+
+    @include media($phone-L) {
+      font-size: 24px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.7);
+      margin-top: 5px;
+    }
+  }
+
+  .resume-section-headers {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 35px 0 20px 0;
+    position: relative;
+
+    @include media($phone-L) {
+      font-size: 16px;
+    }
+    @include media($phone-M) {
+      font-size: 15px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.8);
+      margin-top: 5px;
+      position: absolute;
+      right: 0;
+      left: 115px;
+      top: 5px;
+
+      @include media($phone-L) {
+        left: 95px;
+      }
+      @include media($phone-M) {
+        left: 92px;
+      }
+    }
+  }
+  #skills-header {
+    &::before {
+      left: 320px;
+
+      @include media($phone-L) {
+        left: 280px;
+      }
+      @include media($phone-M) {
+        left: 265px;
+      }
+    }
+  }
+  #education-header {
+    &::before {
+      left: 130px;
+
+      @include media($phone-L) {
+        left: 110px;
+      }
+      @include media($phone-M) {
+        left: 105px;
+      }
+    }
+  }
+  #experience-header {
+    &::before {
+      left: 135px;
+
+      @include media($phone-L) {
+        left: 115px;
+      }
+      @include media($phone-M) {
+        left: 110px;
+      }
+    }
+  }
+}
+
+#resume-skills {
+  p {
+    margin-top: 15px;
+  }
+}
+
+#resume-education,
+#resume-experience {
+  :not(h2) {
+    line-height: 1.8;
+  }
+  ul {
+    padding-left: 15px;
+  }
+
+  .education-headers,
+  .experience-headers {
+    display: flex;
+    margin-bottom: 10px;
+
+    h4 {
+      margin-left: auto;
+      font-size: 14px;
+    }
+
+    @include media($phone-L) {
+      h3,
+      h4 {
+        font-size: 14px;
+      }
+    }
+    @include media($phone-M) {
+      h3,
+      h4 {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+#resume-education {
+  & ul:nth-of-type(1) {
+    margin-bottom: 15px;
+  }
+}
+
+@include media($phone-L) {
+  #resume-experience .experience-headers {
+    display: flex;
+    flex-direction: column;
+    h4 {
+      margin-left: 0;
+    }
+  }
+}

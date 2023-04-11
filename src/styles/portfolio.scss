@@ -1,0 +1,131 @@
+#portfolio-container {
+  background: white;
+
+  #portfolio-header {
+    text-align: center;
+    margin: 100px 0 150px 0;
+
+    @include media($phone-L) {
+      margin-bottom: 75px;
+    }
+    @include media($tablet) {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+.portfolio-item-wrapper {
+  display: flex;
+  width: $containerDesktop;
+  margin: 0 auto 250px auto;
+  position: relative;
+
+  @include media($laptop-S) {
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 700px;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 70px -15px rgb(0, 67, 70);
+    -webkit-box-shadow: 0 12px 100px -20px rgb(0, 67, 70);
+  }
+  @include media($tablet) {
+    padding: 30px;
+    width: 90%;
+    margin-bottom: 75px;
+  }
+  @include media($phone-L) {
+    overflow: hidden;
+  }
+
+  hr {
+    width: 30%;
+    border-color: grey;
+    opacity: 0.3;
+    margin: 20px 0 30px 0;
+
+    @include media($phone-L) {
+      width: 80%;
+    }
+  }
+
+  span {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
+    padding: 8px 15px;
+    margin-right: 20px;
+    border-radius: 20px;
+  }
+  .portfolio-item-tech {
+    margin: 5px 5px;
+    display: inline-block;
+    width: min-content;
+  }
+
+  .portfolio-item-info {
+    flex-basis: 50%;
+    margin-right: 200px;
+
+    @include media($laptop-L) {
+      flex-basis: 30%;
+      margin: 0 100px;
+    }
+    @include media($laptop-M) {
+      margin: 0 50px;
+    }
+    @include media($laptop-S) {
+      text-align: center;
+
+      hr {
+        margin: 10px auto 40px auto;
+      }
+    }
+    @include media($phone-L) {
+      margin: 0 auto;
+      width: 90%;
+    }
+    @include media(400px) {
+      width: 100%;
+      p {
+        text-align: left;
+      }
+    }
+
+    &:nth-child(2) {
+      margin: 0 0 0 200px;
+
+      @include media($laptop-M) {
+        margin: 0 0 0 100px;
+      }
+      @include media($laptop-S) {
+        margin: 0 auto;
+        width: 75%;
+      }
+      @include media($phone-L) {
+        width: 90%;
+        padding-bottom: 50px;
+      }
+      @include media($phone-M) {
+        width: 100%;
+      }
+    }
+
+    .portfolio-item-title {
+      color: $primaryColor;
+      font-size: 28px;
+    }
+    .portfolio-item-type {
+      color: rgb(80, 80, 80);
+      margin: 5px 0 20px 0;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    .portfolio-item-description {
+      line-height: 1.7;
+      color: rgb(80, 80, 80);
+      margin-bottom: 30px;
+    }
+  }
+}

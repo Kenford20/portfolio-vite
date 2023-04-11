@@ -1,0 +1,400 @@
+#contact-container {
+  height: 1100px;
+  position: relative;
+  background-image: linear-gradient(
+    125deg,
+    #002f62 0%,
+    #18496a 50%,
+    #138b89 100%
+  );
+
+  .invalid-form-input {
+    display: inline-block;
+    background: red;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    color: white;
+    text-align: center;
+    margin-left: 5px;
+  }
+
+  .svg-top {
+    top: -20%;
+
+    @include media($laptop-L) {
+      top: -10%;
+    }
+    @include media($tablet) {
+      top: -6%;
+    }
+    @include media($phone-L) {
+      top: -3%;
+    }
+  }
+  .svg-bottom {
+    bottom: -10%;
+
+    @include media($laptop-L) {
+      bottom: 0;
+    }
+  }
+
+  #contact-header {
+    color: white;
+    text-align: center;
+    padding-top: 250px;
+    margin-bottom: 100px;
+
+    svg {
+      top: 0;
+      left: 0;
+    }
+    @include media($phone-L) {
+      padding-top: 100px;
+    }
+
+    h2 {
+      color: white;
+    }
+    h3 {
+      margin-top: 15px;
+    }
+
+    i {
+      -webkit-text-fill-color: white;
+      font-size: 28px;
+    }
+  }
+}
+
+#contact-form-card {
+  display: relative;
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  border-radius: 20px;
+  box-shadow: -5px 5px 60px -15px rgb(0, 67, 70);
+  -webkit-box-shadow: -5px 5px 60px -5px rgb(0, 67, 70);
+
+  @media only screen and (max-width: 1100px) {
+    width: 1000px;
+  }
+  @include media($laptop-S) {
+    flex-direction: column;
+    width: 90%;
+    border-top-right-radius: 20px;
+  }
+
+  #form-wrapper {
+    position: relative;
+    padding: 60px;
+    background-color: white;
+    border-radius: 20px 0 0 20px;
+    flex-basis: 70%;
+    display: grid;
+    grid-template-rows: 90px 100px 100px 2fr;
+    grid-template-columns: 47% 6% 47%;
+    grid-template-areas:
+      "header header header"
+      "name . email"
+      "company . phone"
+      "message message message"
+      "button . .";
+
+    h3 {
+      text-align: center;
+      color: $primaryColor;
+      grid-area: header;
+      margin-top: 10px;
+      font-size: 24px;
+    }
+
+    .form-item-label {
+      color: $primaryColor;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      height: 45px;
+      border: none;
+      border-radius: 10px;
+      background-color: rgb(221, 231, 253);
+      padding: 0 15px;
+      font-family: $mainFont;
+    }
+
+    textarea {
+      box-sizing: border-box;
+      border: none;
+      border-radius: 10px;
+      background-color: rgb(221, 231, 253);
+      padding: 0 15px;
+      padding: 15px;
+      font-family: $mainFont;
+      width: 100%;
+    }
+
+    div:nth-child(2) {
+      grid-area: name;
+    }
+    div:nth-child(3) {
+      grid-area: email;
+    }
+    div:nth-child(4) {
+      grid-area: company;
+    }
+    div:nth-child(5) {
+      grid-area: phone;
+    }
+    div:nth-child(6) {
+      grid-area: message;
+    }
+
+    button {
+      grid-area: button;
+      color: $primaryColor;
+      border: 1px solid $primaryColor;
+      background-color: white;
+      border-radius: 20px;
+      width: 100px;
+      padding: 10px;
+      margin-top: 30px;
+      font-size: 12px;
+      opacity: 1;
+      transition: background-color 0.3s;
+
+      &:hover {
+        color: white;
+        background-color: $primaryColor;
+        box-shadow: 2px 5px 15px -5px $primaryColor;
+        -webkit-box-shadow: 2px 5px 15px -5px $primaryColor;
+      }
+    }
+
+    @include media($laptop-S) {
+      border-top-right-radius: 20px;
+    }
+    @include media($tablet) {
+      padding: 40px;
+    }
+    @include media($phone-L) {
+      padding: 25px;
+      grid-template-columns: 100%;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "header"
+        "name"
+        "email"
+        "company"
+        "phone"
+        "message"
+        "button";
+
+      h3 {
+        margin: 20px 0 40px 0;
+      }
+      .form-items-wrapper {
+        margin-bottom: 20px;
+      }
+
+      button {
+        margin: 5px 0 25px 0;
+        width: 100%;
+      }
+    }
+  }
+
+  #contact-info-wrapper {
+    flex-basis: 30%;
+    width: 100%;
+    border-radius: 0 20px 20px 0;
+    margin: 0 auto;
+    padding: 40px;
+    background-image: linear-gradient(
+      -125deg,
+      #002f62 0%,
+      #18496a 50%,
+      #138b89 100%
+    );
+    color: white;
+
+    @include media($laptop-S) {
+      width: 100%;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 20px;
+      text-align: center;
+      padding: 30px;
+      box-sizing: border-box;
+      margin: 0;
+    }
+    @include media($phone-L) {
+      #info-wrapper {
+        text-align: left;
+        width: 85%;
+        margin: auto;
+      }
+    }
+    @include media($phone-M) {
+      padding: 40px 20px 50px 20px;
+    }
+
+    hr {
+      width: 60%;
+      margin: 30px auto;
+      opacity: 0.5;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    h5 {
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 16px;
+      font-weight: 200;
+    }
+
+    p {
+      padding-top: 25px;
+      font-size: 18px;
+    }
+
+    i {
+      margin: 0 25px 0 10px;
+      font-size: 20px;
+      -webkit-text-fill-color: white;
+    }
+
+    .city-icon {
+      margin-right: 22px;
+      font-size: 18px;
+    }
+    .phone-icon {
+      margin-right: 30px;
+    }
+
+    #alt-contact-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    #alt-contact-wrapper {
+      text-align: center;
+    }
+  }
+}
+
+// #confirmation {
+//     position: absolute;
+//     height: 90px;
+//     left: 60px;
+//     right: 60px;
+//     top: 20px;
+//     padding: 10px 20px 10px 10px;
+//     background: $secondaryColor;
+//     display: flex;
+//     border-radius: 20px;
+//     color: white;
+//     justify-content: center;
+//     align-items: center;
+//     transition: top 0.4s ease-in-out, opacity 0.3s ease-in-out;
+
+//     @include media($tablet) { height: 70px }
+//     @include media($phone-L) {
+//         left: 15px;
+//         right: 15px;
+//         height: 60px;
+//     }
+
+//     p {
+//         margin-left: 20px;
+//         line-height: 1.8;
+//         font-size: 18px;
+
+//         @include media($tablet) { font-size: 14px }
+//         @include media($phone-L) {
+//             font-size: 12px;
+//             line-height: 1.5;
+//             margin-left: 10px;
+//         }
+//         @include media($phone-S) { font-size: 10px }
+//     }
+//     i {
+//         font-size: 56px;
+//         padding: 5px 5px 5px 10px;
+//         -webkit-text-fill-color: white;
+
+//         @include media($phone-L) { font-size: 40px }
+//     }
+// }
+
+#confirmation,
+#form-sending {
+  position: fixed;
+  z-index: 2;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px 10px 10px;
+  border-radius: 20px;
+  z-index: 2;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#confirmation {
+  width: 600px;
+  transition: top 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  background: $secondaryColor;
+  z-index: 2;
+
+  @include media($phone-L) {
+    width: 300px;
+    padding: 0 10px;
+  }
+
+  p {
+    margin-left: 20px;
+    line-height: 1.8;
+    font-size: 18px;
+
+    @include media($tablet) {
+      font-size: 14px;
+    }
+    @include media($phone-L) {
+      font-size: 12px;
+      line-height: 1.5;
+      margin-left: 10px;
+    }
+    @include media($phone-S) {
+      font-size: 10px;
+    }
+  }
+
+  i {
+    font-size: 50px;
+    padding: 5px 5px 5px 10px;
+    -webkit-text-fill-color: white;
+
+    @include media($phone-L) {
+      font-size: 40px;
+    }
+  }
+}
+
+#form-sending {
+  width: 300px;
+  background: rgb(25, 25, 25);
+}

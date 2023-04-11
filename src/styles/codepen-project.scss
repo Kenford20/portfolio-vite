@@ -1,0 +1,120 @@
+.codepen-item {
+  position: relative;
+
+  .project-img-wrapper {
+    border-radius: 10px;
+    margin: 0 30px;
+
+    &:hover img {
+      opacity: 0.1;
+    }
+
+    @include media($phone-L) {
+      margin: 0 0 0 17px;
+    }
+    @include media($phone-M) {
+      margin: 0 4px 0 17px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 350px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+
+    @include media($tablet) {
+      height: 300px;
+    }
+  }
+
+  .project-description {
+    position: absolute;
+    width: 350px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    transition: opacity 0.5s ease-out;
+
+    @include media(1440px) {
+      width: 265px;
+    }
+    @include media($laptop-L) {
+      width: 330px;
+    }
+    @include media($laptop-S) {
+      width: 270px;
+    }
+    @include media($tablet) {
+      width: 255px;
+    }
+    @include media($phone-L) {
+      width: 245px;
+      font-size: 12px;
+    }
+    @include media($phone-M) {
+      width: 200px;
+    }
+
+    h2,
+    p,
+    a {
+      color: $primaryColor;
+    }
+    h2 {
+      margin-bottom: 15px;
+      text-decoration: underline;
+    }
+    p {
+      margin-bottom: 25px;
+      line-height: 1.8;
+      font-weight: 600;
+    }
+    a {
+      text-decoration: none;
+      background: linear-gradient(
+        155deg,
+        #012041 0%,
+        #18496a 50%,
+        #138b89 100%
+      );
+      background: -webkit-linear-gradient(
+        250deg,
+        #012041 0%,
+        #18496a 50%,
+        #138b89 100%
+      );
+      padding: 10px 15px;
+      color: white;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: -50px;
+      bottom: -50px;
+      left: -25px;
+      right: -25px;
+      transition: transform 0.4s ease-in-out;
+      z-index: -1;
+    }
+    &::before {
+      transform: scale(0, 1);
+      border-top: 2px solid $primaryColor;
+      border-bottom: 2px solid $secondaryColor;
+    }
+    &:hover::before {
+      transform: scale(1.05, 1);
+    }
+
+    &::after {
+      transform: scale(1, 0);
+      border-left: 2px solid $primaryColor;
+      border-right: 2px solid $secondaryColor;
+    }
+    &:hover::after {
+      transform: scale(1, 1.05);
+    }
+  }
+}

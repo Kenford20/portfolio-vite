@@ -1,0 +1,38 @@
+#codepen {
+  text-align: center;
+  background-color: $bg-light;
+  padding-top: 100px;
+}
+
+#codepen-container {
+  width: 80%;
+  padding-bottom: 150px;
+  margin: 100px auto 0 auto;
+
+  .slick-list,
+  .slick-next,
+  .slick-prev {
+    z-index: 100;
+  }
+  .slick-next,
+  .slick-prev {
+    height: 35px;
+    width: 35px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  @include media($phone-M) {
+    .slick-next {
+      right: -33px;
+    }
+  }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 36px;
+  color: $primaryColor;
+  opacity: 1;
+}

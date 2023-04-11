@@ -1,0 +1,127 @@
+#about-section {
+  background-color: $bg-light;
+  position: relative;
+  height: 600px;
+
+  #about-header {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media($laptop-S) {
+      height: 150px;
+      padding-top: 25px;
+    }
+  }
+}
+
+#about-main {
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  border-radius: 10px;
+  line-height: 1.7;
+  background-color: rgb(253, 253, 253);
+  box-shadow: -5px 5px 40px -5px rgb(0, 67, 70);
+  -webkit-box-shadow: -5px 5px 40px -5px rgb(0, 67, 70);
+
+  @include media($laptop-S) {
+    width: 100%;
+    flex-direction: column;
+    background-color: $bg-light;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+
+  #about-summary {
+    flex-basis: 60%;
+    padding: 50px;
+
+    @include media($laptop-S) {
+      width: 75%;
+      margin: auto;
+      padding-top: 0;
+    }
+    @include media($phone-L) {
+      width: 90%;
+      padding: 5px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+      color: $secondaryColor;
+    }
+    h2 {
+      font-size: 19px;
+      margin: 25px 0;
+      color: $secondaryColor;
+      opacity: 0.8;
+      font-weight: 400;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
+  #about-description {
+    flex-basis: 40%;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(
+      155deg,
+      #012041 0%,
+      #18496a 50%,
+      #138b89 100%
+    );
+    border-radius: 0 10px 10px 0;
+
+    @include media($laptop-S) {
+      background: $bg-light;
+      color: $primaryColor;
+      margin-bottom: 150px;
+
+      .contact-btn {
+        background: $bg-light !important;
+        border: 1px solid $primaryColor !important;
+        color: $primaryColor !important;
+        i {
+          -webkit-text-fill-color: $primaryColor;
+        }
+
+        &:hover {
+          background: $primaryColor !important;
+          color: white !important;
+          box-shadow: 2px 5px 15px -5px $primaryColor !important;
+          -webkit-box-shadow: 2px 5px 15px -5px $primaryColor !important;
+
+          i {
+            -webkit-text-fill-color: white !important;
+          }
+        }
+      }
+    }
+    @include media($phone-L) {
+      margin-bottom: 75px;
+    }
+
+    img {
+      margin: 50px 0 15px 0;
+      border-radius: 50%;
+      height: 250px;
+    }
+    h2 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: 100;
+    }
+    h3 {
+      font-size: 14px;
+      font-weight: 100;
+    }
+    p {
+      margin: 25px 0;
+    }
+  }
+}

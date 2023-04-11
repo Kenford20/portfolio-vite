@@ -1,0 +1,28 @@
+#footer-container {
+  text-align: center;
+  color: $primaryColor;
+  margin-top: 230px;
+
+  @include media($laptop-S) {
+    margin-top: 830px;
+  }
+  @include media($phone-L) {
+    margin-top: 750px;
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  a {
+    font-size: 14px;
+    color: $primaryColor;
+  }
+
+  p {
+    font-size: 12px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    line-height: 1.8;
+  }
+}
