@@ -66,7 +66,7 @@ const Hero = ({ isNavActive, showResumeModal }) => {
       <img
         id="hero-img"
         data-aos="fade-in"
-        src="src/images/hero3.png"
+        src={new URL('../assets/hero3.png', import.meta.url).href}
         alt="hero"
       />
     </div>

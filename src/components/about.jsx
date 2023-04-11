@@ -57,7 +57,7 @@ const About = ({ isResumeOpen }) => {
           <img
             id="about-img"
             alt="Kenny at a mural"
-            src="src/images/profile2.png"
+            src={new URL('../assets/profile2.png', import.meta.url).href}
           />
           <h1> Kenny Zhou </h1>
           <h2> Chicago, Illinois </h2>

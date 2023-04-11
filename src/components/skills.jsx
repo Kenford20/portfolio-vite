@@ -32,7 +32,7 @@ const Skills = () => {
           <img
             id="mongodb-icon"
             alt="mongodb icon"
-            src="src/images/mongodb-icon.png"></img>
+            src={new URL('../assets/mongodb-icon.png', import.meta.url).href}></img>
           <h5>MongoDB</h5>
         </div>
         <div className="skills-item" data-aos="fade-in" data-aos-delay="550">

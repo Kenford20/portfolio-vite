@@ -5,11 +5,11 @@ const CodepenProject = ({ imgKey, altTag, title, description, projectUrl }) => {
   const [isTextActive, toggleText] = useState(false);
 
   const imgPaths = {
-    piano: "src/images/codepen/piano.png",
-    pomodoroClock: "src/images/codepen/pomodoro-clock.png",
-    quoteMachine: "src/images/codepen/quote-machine.png",
-    markdownPreviewer: "src/images/codepen/markdown-previewer.png",
-    calculator: "src/images/codepen/calculator.png",
+    piano: new URL('../assets/codepen/piano.png', import.meta.url).href,
+    pomodoroClock: new URL('../assets/codepen/pomodoro-clock.png', import.meta.url).href,
+    quoteMachine: new URL('../assets/codepen/quote-machine.png', import.meta.url).href,
+    markdownPreviewer: new URL('../assets/codepen/markdown-previewer.png', import.meta.url).href,
+    calculator: new URL('../assets/codepen/calculator.png', import.meta.url).href,
   };
 
   return (

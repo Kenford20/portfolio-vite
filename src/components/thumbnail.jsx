@@ -14,16 +14,16 @@ export const Thumbnail = ({
   const [isBtnActive, toggleBtnState] = useState(false);
 
   const imgPaths = {
-    cajewelers: "src/images/portfolio/cajewelers.png",
-    cajewelersM: "src/images/portfolio/cajewelers-mobile.png",
-    codenames: "src/images/portfolio/codenames-board.png",
-    codenamesM: "src/images/portfolio/codenames-mobile2.png",
-    typingWebsite: "src/images/portfolio/typing-website.png",
-    typingWebsiteM: "src/images/portfolio/typing-website-mobile.png",
-    kaori: "src/images/portfolio/kaori.png",
-    kaoriM: "src/images/portfolio/kaori-mobile.png",
-    epic7: "src/images/portfolio/epic7.png",
-    epic7M: "src/images/portfolio/epic7-mobile.png",
+    cajewelers: new URL("../assets/portfolio/cajewelers.png", import.meta.url).href,
+    cajewelersM: new URL("../assets/portfolio/cajewelers-mobile.png", import.meta.url).href,
+    codenames: new URL("../assets/portfolio/codenames-board.png", import.meta.url).href,
+    codenamesM: new URL("../assets/portfolio/codenames-mobile2.png", import.meta.url).href,
+    typingWebsite: new URL("../assets/portfolio/typing-website.png", import.meta.url).href,
+    typingWebsiteM: new URL("../assets/portfolio/typing-website-mobile.png", import.meta.url).href,
+    kaori: new URL("../assets/portfolio/kaori.png", import.meta.url).href,
+    kaoriM: new URL("../assets/portfolio/kaori-mobile.png", import.meta.url).href,
+    epic7: new URL("../assets/portfolio/epic7.png", import.meta.url).href,
+    epic7M: new URL("../assets/portfolio/epic7-mobile.png", import.meta.url).href,
   };
 
   return (
