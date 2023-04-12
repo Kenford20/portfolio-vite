@@ -40,7 +40,7 @@ const Resume = ({ isOpen, hideModal }) => {
           <Project
             title="Portfolio Website"
             technologies="React.js, Email.js, Sass(SCSS)"
-            liveLink="www.kenford.info"
+            liveLink="https://kenford-portfolio.web.app/"
             githubLink="https://github.com/Kenford20/Portfolio"
             bulletPoints={[
               "Developed my portfolio website from ground up using front end technologies like React and Sass",
@@ -50,7 +50,7 @@ const Resume = ({ isOpen, hideModal }) => {
           <Project
             title="C.A. Jewelers Inc."
             technologies="MongoDB, Express.js, React.js, Redux, Node.js, Bootstrap"
-            liveLink="https://blooming-river-65352.herokuapp.com/"
+            liveLink="https://ca-jewelers.web.app/"
             githubLink="#"
             bulletPoints={[
               "Built a full stack eCommerce website from scratch as an SPA with multiple routes using React Router",
@@ -62,7 +62,7 @@ const Resume = ({ isOpen, hideModal }) => {
           <Project
             title="Kodo Namaewaz"
             technologies="JavaScript, Node.js, Socket.io, HTML"
-            liveLink="http://weebcodenames.online"
+            liveLink="https://kodo-namaewaz.web.app/"
             githubLink="https://github.com/Kenford20/Kodo-Namaewas-Heroku"
             bulletPoints={[
               "Constructed an interactive browser version of the board/card game, Codenames",

@@ -107,7 +107,7 @@ const Portfolio = () => {
           pathMobile="cajewelersM"
           animation="fade-left"
           animationDelay={1000}
-          siteUrl="https://cajewelers.herokuapp.com/"
+          siteUrl="https://ca-jewelers.web.app/"
         />
       </div>
 
@@ -120,7 +120,7 @@ const Portfolio = () => {
           animation="fade-right"
           animationDelay={1000}
           btnPosition="850px"
-          siteUrl="http://weebcodenames.online"
+          siteUrl="https://kodo-namaewaz.web.app/"
         />
         <div className="portfolio-item-info" data-aos="fade-left">
           <h1 className="portfolio-item-title"> Kodo Namaewaz </h1>
