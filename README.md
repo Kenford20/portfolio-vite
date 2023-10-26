@@ -3,7 +3,7 @@
 My single page, fully-responsive web development portfolio built with React and Sass.
 
 ## *Demo*
-View my portfolio live at www.kenford.info
+View my portfolio live at kenford-portfolio.web.app/
 
 ## *Features*
 * Personal projects
